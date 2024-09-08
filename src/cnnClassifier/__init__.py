@@ -17,4 +17,3 @@ logging.basicConfig(level=logging.INFO,
 
 logger = logging.getLogger("cnnClassifierLogger")
 
-__all__ = ("logging")

@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "MLOps-CNNClassifier"
 AUTHOR_USER_NAME = "tysonbarretto"
-SRC_REPO = "MLOps-CNNClassifier"
+SRC_REPO = "cnnClassifier"
 AUTHOR_EMAIL = "tysonbarrett01991@gmail.com"
 
 

@@ -4,12 +4,12 @@ from cnnClassifier import logger
 
 
 class PrepareBaseModelTrainingPipline:
-    def __init(self):
+    def __init__(self):
         pass
    
     def main(self):
         config = ConfigurationManager()
-        data_ingestion_config=config.get_prepare_base_model_config()
-        data_ingestion = PrepareBaseModel(config=data_ingestion_config)
-        data_ingestion.get_base_model()
-        data_ingestion.update_base_model()
+        prepare_base_model_config = config.get_prepare_base_model_config()
+        prepare_base_model = PrepareBaseModel(config=prepare_base_model_config)
+        prepare_base_model.get_base_model()
+        prepare_base_model.update_base_model()

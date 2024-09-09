@@ -15,11 +15,10 @@ class PrepareCallback:
     @property
     def _create_tb_callbacks(self):
         timestamp = time.strftime("%Y-%m-%d-%H-%M-%S")
-        tb_running_log_dir = self.config.tensorboard_root_log_dir
-            
-        #     self.config.tensorboard_root_log_dir,
-        #     f"tb_logs_at_{timestamp}",
-        # )
+        tb_running_log_dir = os.path.join(
+            self.config.tensorboard_root_log_dir,
+            f"tb_logs_at_{timestamp}",
+        )
         return tf.keras.callbacks.TensorBoard(log_dir=tb_running_log_dir)
     
 
@@ -32,7 +31,6 @@ class PrepareCallback:
 
 
     def get_tb_ckpt_callbacks(self):
-        #print(self.config.tensorboard_root_log_dir,'\n',self.config.checkpoint_model_filepath)
         return [
             self._create_tb_callbacks,
             self._create_ckpt_callbacks

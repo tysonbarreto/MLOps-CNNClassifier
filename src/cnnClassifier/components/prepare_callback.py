@@ -2,6 +2,7 @@ import os
 import urllib.request as request
 import tensorflow as tf
 from pathlib import Path
+import time
 
 from cnnClassifier.entity import PrepareCallbacksConfig
 from cnnClassifier.config import ConfigurationManager
@@ -14,10 +15,11 @@ class PrepareCallback:
     @property
     def _create_tb_callbacks(self):
         timestamp = time.strftime("%Y-%m-%d-%H-%M-%S")
-        tb_running_log_dir = os.path.join(
-            self.config.tensorboard_root_log_dir,
-            f"tb_logs_at_{timestamp}",
-        )
+        tb_running_log_dir = self.config.tensorboard_root_log_dir
+            
+        #     self.config.tensorboard_root_log_dir,
+        #     f"tb_logs_at_{timestamp}",
+        # )
         return tf.keras.callbacks.TensorBoard(log_dir=tb_running_log_dir)
     
 

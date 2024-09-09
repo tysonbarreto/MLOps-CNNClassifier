@@ -62,6 +62,7 @@ def load_bin(path:Path)->Any:
 def get_size(path:Path)->str:
     return f"~ {round(os.path.getsize(path) / 1024)} KB"
 
+
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
     with open(fileName, 'wb') as f:

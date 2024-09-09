@@ -1,0 +1,1 @@
+from cnnClassifier.pipeline.st_01_data_ingestion import DataIngestionTrainingPipline
